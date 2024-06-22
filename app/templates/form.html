@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поиск по никнейму</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+        .logo {
+            width: 200px;
+            height: 100px; /* Задайте размер вашего логотипа */
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+    <script>
+        function viewHistory() {
+            window.location.href = '/history';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="static/logo.jpg" alt="Логотип" class="logo"> <!-- Замените 'logo.png' на путь к вашему логотипу -->
+        <div class="menu">
+            <a href="/">Главная</a>
+            <a href="/about">О нас</a>
+            <a href="/services">Услуги</a>
+            <a href="history">Результаты</a>
+        </div>
+    </div>
+    <h1>Поиск по никнейму</h1>
+    <form action="/" method="post">
+        <label for="nickname">Введите Nickname:</label>
+        <input type="text" id="nickname" name="nickname" required>
+        <button type="submit">Поиск</button>
+    </form>
+    <br>
+    <button onclick="viewHistory()">Посмотреть историю запросов</button>
+</body>
+</html>

@@ -1,7 +1,8 @@
 .footer {
-  background-color: transparent;
+  background-color: #d3cdfa;
   padding: 10px;
   text-align: center;
+  box-shadow: 0 -2px 2px  rgba(0, 0, 0, 0.1);
 }
 
 .footer-logo {
@@ -14,6 +15,7 @@
 }
 
 .footer-text {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #333
 }

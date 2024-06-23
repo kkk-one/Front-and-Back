@@ -1,0 +1,19 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.thtd {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+
+.button {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 2px solid #000000;
+  border-radius: 10px; /* Добавлены округлые края */
+  font-size: 16px; /* Установлен размер шрифта */
+}

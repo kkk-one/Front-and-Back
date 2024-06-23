@@ -10,7 +10,7 @@ export const Footer = () => {
        <img src={logo} alt="Логотип" />
       </div>
       <div className="footer-text">
-        © 2024 NoName. Все права защищены.
+        © 2024 Search of MT. Все права защищены.
       </div>
     </footer>
   );

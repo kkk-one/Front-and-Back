@@ -1,0 +1,52 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 50vh;
+  padding-top: 50px;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #000;
+  border-radius: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-label {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-input,
+.login-button {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 20px 0;
+  padding: 10px; /* Увеличено для большей высоты */
+  width: 80%;
+  max-width: 300px;
+  border: 2px solid #000000;
+  border-radius: 10px; /* Добавлены округлые края */
+  font-size: 16px; /* Установлен размер шрифта */
+}
+
+.toggle-button {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 15px;
+}

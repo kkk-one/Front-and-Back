@@ -1,0 +1,30 @@
+.header {
+  background-color: #d3cdfa;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: inherit;
+}
+
+.header-logo img{
+  width: 160px;
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #f8f8f8;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+

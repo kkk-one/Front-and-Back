@@ -4,3 +4,6 @@ pydantic~=1.10.4
 
 python-multipart~=0.0.9
 jinja2~=3.1.4
+passlib
+databases
+aiosqlite

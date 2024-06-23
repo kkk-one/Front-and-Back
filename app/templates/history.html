@@ -22,14 +22,12 @@
             <th>ID</th>
             <th>Даты и время запроса</th>
             <th>Nickname</th>
-            <th>User</th>
         </tr>
         {% for record in history_records %}
         <tr>
-            <td>{{ record[0] }}</td>
-            <td>{{ record[2] }}</td>
-            <td>{{ record[1] }}</td>
-            <td>{{ record[3] }}</td>
+            <td>{{ record.request_id }}</td>
+            <td>{{ record.request_date }}</td>
+            <td>{{ record.nickname }}</td>
         </tr>
         {% endfor %}
     </table>

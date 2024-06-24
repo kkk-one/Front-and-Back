@@ -14,6 +14,6 @@
   margin-top: 20px;
   margin-bottom: 50px;
   border: 2px solid #000000;
-  border-radius: 10px; /* Добавлены округлые края */
-  font-size: 16px; /* Установлен размер шрифта */
+  border-radius: 10px;
+  font-size: 16px;
 }

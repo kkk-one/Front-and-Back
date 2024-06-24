@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { fetchHistory, postNickname } from './api';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import HistoryPage from './HistoryPage';
@@ -14,16 +14,26 @@ function App() {
   const [nickname, setNickname] = useState('');
   const [history, setHistory] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [message, setMessage] = useState(''); // Добавлено состояние для сообщения
-  const [result, setResult] = useState(null); // Добавлено состояние для результата с сервера
+  const [message, setMessage] = useState('');
+  const [result, setResult] = useState(null);
 
   const handleNicknameSubmit = async (event) => {
     event.preventDefault();
-    setMessage('Запрос отправлен'); // Установка сообщения при отправке формы
-    setTimeout(() => setMessage(''), 5000); // Сообщение исчезнет через 5 секунд
-    const result = await postNickname(nickname);
-    setResult(result); // Сохранение результата в состояние
-    console.log(result);
+    setMessage('Отправка данных...');
+    try {
+      const response = await postNickname(nickname);
+      if (response.ok) {
+        const result = await response.json();
+        setResult(result);
+        setMessage('Данные успешно получены');
+      } else {
+        setMessage('Ошибка при отправке данных: ' + response.status);
+      }
+    } catch (error) {
+      setMessage('Ошибка при отправке данных');
+      console.error('Ошибка при отправке данных:', error);
+    }
+    setTimeout(() => setMessage(''), 5000);
   };
 
   const handleFetchHistory = async () => {
@@ -57,12 +67,16 @@ function App() {
                   />
                   <button type="submit" className="submit-button">Отправить</button>
                 </form>
-                {message && <div className="message">{message}</div>} {/* Отображение сообщения */}
+                {message && <div className="message">{message}</div>}
+                {result && <div className="result">{JSON.stringify(result)}</div>}
+
               </div>
               {isAuthenticated && (
                 <>
+                  <Link to={"/history"}>
                   <button onClick={handleFetchHistory}>Получить историю</button>
-                  {result && <div className="result">{JSON.stringify(result)}</div>} {/* Отображение результата */}
+                  </Link>
+                  {result && <div className="result">{JSON.stringify(result)}</div>}
                 </>
               )}
             </>

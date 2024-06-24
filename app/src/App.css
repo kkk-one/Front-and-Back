@@ -1,4 +1,6 @@
 .App {
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -9,21 +11,25 @@ form {
 
 input[type="text"] {
   margin: 0 0 20px 0;
-  padding: 10px; /* Увеличено для большей высоты */
+  padding: 10px;
   width: 80%;
   max-width: 300px;
   border: 2px solid #000000;
-  border-radius: 10px; /* Добавлены округлые края */
-  font-size: 16px; /* Установлен размер шрифта */
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 button {
- font-family: "Montserrat", sans-serif;
-  padding: 10px 20px; /* Паддинги для кнопки */
-  cursor: pointer; /* Курсор в виде указателя */
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-/* Стили для текста поиска */
 .search-text {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
@@ -31,15 +37,15 @@ button {
   margin-top: 20px;
 }
 
-/* Дополнительные стили для центрирования элементов формы */
+
 .toggle-button, .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid #000000;
-  border-radius: 10px; /* Добавлены округлые края */
-  font-size: 16px; /* Установлен размер шрифта */
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .form-container {
@@ -52,15 +58,16 @@ button {
 .nickname-form {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  max-width: 300px; /* Можно изменить в соответствии с вашим дизайном */
+  max-width: 300px;
 }
 
 .submit-button {
   font-family: "Montserrat", sans-serif;
-  margin-top: 10px; /* Отступ сверху для кнопки */
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 2px solid #000000;
-  border-radius: 10px; /* Добавлены округлые края */
-  font-size: 16px; /* Установлен размер шрифта */
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .message{

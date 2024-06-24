@@ -38,12 +38,12 @@
 .login-button {
   font-family: "Montserrat", sans-serif;
   margin: 0 0 20px 0;
-  padding: 10px; /* Увеличено для большей высоты */
+  padding: 10px;
   width: 80%;
   max-width: 300px;
   border: 2px solid #000000;
-  border-radius: 10px; /* Добавлены округлые края */
-  font-size: 16px; /* Установлен размер шрифта */
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .toggle-button {
